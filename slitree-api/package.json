@@ -1,0 +1,48 @@
+{
+  "name": "api---posts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "vitest run --dir src/web",
+    "test:create-prisma-environment": "npm link ./prisma/vitest-environment-prisma",
+    "test:install-prisma-environment": "npm link vitest-environment-prisma",
+    "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/fastify-multipart": "^0.7.0",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.12.12",
+    "@types/supertest": "^6.0.2",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^5.14.0",
+    "supertest": "^7.0.0",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/jwt": "^8.0.1",
+    "@prisma/client": "^5.14.0",
+    "@types/cors": "^2.8.17",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "fastify-multer": "^2.0.3",
+    "fastify-multipart": "^5.4.0",
+    "firebase": "^10.12.0",
+    "firebase-admin": "^12.1.0",
+    "multer": "^1.4.5-lts.1",
+    "zod": "^3.23.8"
+  }
+}
