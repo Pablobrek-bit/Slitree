@@ -2,10 +2,8 @@ import admin from 'firebase-admin';
 import path from 'path';
 import { env } from '../env';
 
-let serviceAccount = path.join(__dirname, env.FIREBASE_API_KEY_LOCATION);
-
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(env.FIREBASE_API_KEY_LOCATION),
   storageBucket: env.FIREBASE_BUCKET_URL,
 });
 
